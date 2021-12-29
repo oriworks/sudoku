@@ -4,5 +4,6 @@ const debug = process.env.NODE_ENV !== 'production'
 
 module.exports = {
   reactStrictMode: true,
-  assetPrefix: !debug ? '/sudoku/' : '',
+  basePath: !debug ? process.env.NEXT_PUBLIC_BACKEND_URL : '',
+  assetPrefix: !debug ? process.env.NEXT_PUBLIC_BACKEND_URL : '',
 }
